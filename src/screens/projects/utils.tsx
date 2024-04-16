@@ -1,6 +1,6 @@
 import {BiLogoPostgresql} from 'react-icons/bi';
-import {FaNodeJs, FaReact} from 'react-icons/fa';
-import {SiNextdotjs, SiTailwindcss} from 'react-icons/si';
+import {FaGoogle, FaNodeJs, FaReact} from 'react-icons/fa';
+import {SiNextdotjs, SiStripe, SiTailwindcss} from 'react-icons/si';
 
 import {
   SiAmazonaws,
@@ -17,8 +17,9 @@ import {
 import btfLofo from 'assets/images/btf-logo.png';
 import cfLofo from 'assets/images/cfLogo.png';
 import s2eLofo from 'assets/images/s2e-logo.webp';
+import smartFoodLogo from 'assets/images/smart-food.png';
 import viktreLofo from 'assets/images/viktre-logo.jpeg';
-import weatherAppLofo from 'assets/images/weatherApp.jpeg';
+import weatherAppLofo from 'assets/images/weather-app.png';
 import porfolioLogo from '../../../public/logo.svg';
 
 export interface Project {
@@ -101,6 +102,32 @@ export const comerciaProjects: Project[] = [
 
 export const customProjects: Project[] = [
   {
+    name: 'Weather React App',
+    url: 'https://weather.enikosoft.com/',
+    description: `React/Typescript/StyledComponent/zustand. You can find weather and current location time for any cities, searched by Google Place Api. Adaptive and responsive design. Weather data from https://www.visualcrossing.com`,
+    img: weatherAppLofo,
+    stack: [
+      <SiTypescript key="ts" color="#2F75C0" className="text-[28px]" />,
+      <FaReact key="react" color="#5ED4F4" className="text-[28px]" />,
+      <FaGoogle key="google" color="#000" className="text-[28px]" />,
+    ],
+    git: 'https://github.com/enikosoft/weather-widget',
+  },
+  {
+    name: 'Online shop "Smart Food"',
+    url: 'https://smart-food.enikosoft.com/',
+    description: `E-commerce project on Next.js, React, Tailwind, Stripe. Online shop for selling food. Adaptive and responsive design. Full checkout proccess. Using clerk auth. More information in github.`,
+    img: smartFoodLogo,
+    stack: [
+      <SiNextdotjs key="next" className="text-[28px] text-white light:text-black" />,
+      <FaReact key="react" color="#5ED4F4" className="text-[28px]" />,
+      <SiTailwindcss key="tailwind" color="#3FBDCC" className="text-[28px]" />,
+      <SiStripe key="stripe" color="#6058f8" className="text-[28px]" />,
+      <BiLogoPostgresql key="postgresql" color="#3A6596" className="text-[28px]" />,
+    ],
+    git: 'https://github.com/enikosoft/next-ecommerce-smart-food',
+  },
+  {
     name: 'My Portfolio',
     url: '',
     description: `Welcome to my portfolio! Explore my diverse range of projects,
@@ -111,19 +138,8 @@ export const customProjects: Project[] = [
     stack: [
       <SiTypescript key="ts" color="#2F75C0" className="text-[28px]" />,
       <FaReact key="react" color="#5ED4F4" className="text-[28px]" />,
-      <SiTailwindcss key="tailwind color=" color="#3FBDCC" className="text-[28px]" />,
+      <SiTailwindcss key="tailwind" color="#3FBDCC" className="text-[28px]" />,
     ],
     git: 'https://github.com/enikosoft/portfolio',
-  },
-  {
-    name: 'Weather React App',
-    url: 'https://develop.d32z2z7ii5cmj4.amplifyapp.com/',
-    description: `React/Typescript/StyledComponent/zustand. You can find weather and current location time for any cities, searched by Google Place Api.`,
-    img: weatherAppLofo,
-    stack: [
-      <SiTypescript key="ts" color="#2F75C0" className="text-[28px]" />,
-      <FaReact key="react" color="#5ED4F4" className="text-[28px]" />,
-    ],
-    git: 'https://github.com/enikosoft/weather-online-widget',
   },
 ];
